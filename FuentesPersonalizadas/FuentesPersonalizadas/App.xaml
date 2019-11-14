@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FuentesPersonalizadas.App">
+    <Application.Resources>
+        <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Material Design Icons" />
+            <On Platform="Android" Value="Iconos.ttf#Material Design Icons" />
+        </OnPlatform>
+        <OnPlatform x:Key="OpenSansFont" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Open Sans"></On>
+            <On Platform="Android" Value="OpenSans.ttf#Open Sans"></On>
+        </OnPlatform>
+
+        <Style TargetType="Label" x:Key="FontLabel">
+            <Setter Property="FontFamily" Value="{StaticResource Key=OpenSansFont}"></Setter>
+        </Style>
+
+        <Style TargetType="Entry" x:Key="EntryLabel">
+            <Setter Property="FontFamily" Value="{StaticResource Key=OpenSansFont}"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

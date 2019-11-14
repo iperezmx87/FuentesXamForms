@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FuentesPersonalizadas.MainPage"
+             xmlns:Iconos="clr-namespace:FuentesPersonalizadas">
+
+    <StackLayout Spacing="10"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        
+        <Label Text="Texto normal" FontSize="25"></Label>
+        
+        <Label Text="Texto con fuente" Style="{StaticResource FontLabel}"
+               FontSize="25"
+               ></Label>
+
+        <StackLayout Spacing="10" Orientation="Horizontal">
+            <Image>
+                <Image.Source>
+                    <FontImageSource
+                    Size="25"
+                    Color="Black"
+                    Glyph="{x:Static Iconos:IconFont.Key}"
+                    FontFamily="{DynamicResource MaterialFontFamily}"></FontImageSource>
+                </Image.Source>
+            </Image>
+
+            <Entry Placeholder="contraseña" 
+                   Style="{StaticResource EntryLabel}" 
+                   FontSize="18" ></Entry>
+        </StackLayout>
+        
+        <!--  imagen cargada desde codigo-->
+        <Image x:Name="imgIcono2"></Image>
+        
+        <Image>
+            <Image.Source>
+                <FontImageSource
+                    Size="50"
+                    Color="Black"
+                    Glyph="{x:Static Iconos:IconFont.Adjust}"
+                    FontFamily="{DynamicResource MaterialFontFamily}"></FontImageSource>
+            </Image.Source>
+        </Image>
+    </StackLayout>
+
+</ContentPage>
